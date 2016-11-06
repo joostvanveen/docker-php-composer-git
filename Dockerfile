@@ -2,7 +2,16 @@ FROM debian:jessie
 MAINTAINER Woraphot Chokratanasombat <guhungry@gmail.com>
 
 # Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y openssl ca-certificates cron git curl php5-fpm php5-curl php5-cli php5-mcrypt php5-mysqlnd php5-pgsql php5-memcached php5-intl php5-xdebug && \
+RUN apt-get update && apt-get install -y openssl ca-certificates cron curl
+
+# Install dotdeb Repository
+RUN curl -o dotdeb.gpg https://www.dotdeb.org/dotdeb.gpg && \
+    apt-key add dotdeb.gpg && \
+    rm dotdeb.gpg && \
+    echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
+
+# Install Git, PHP, xdebug
+RUN apt-get update && apt-get install -y git php7.0-fpm php7.0-curl php7.0-cli php7.0-mcrypt php7.0-mysqlnd php7.0-pgsql php7.0-memcached php7.0-intl php7.0-xdebug && \
     apt-get clean && apt-get autoremove && \
     rm -rf /usr/share/locale/* && \
     rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
