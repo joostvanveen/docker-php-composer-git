@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Woraphot Chokratanasombat <guhungry@gmail.com>
 
 # Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y openssl ca-certificates cron curl
+RUN apt-get update && apt-get install -y openssl lsb-release ca-certificates cron curl
 
 # Install sury Repository
 RUN curl -o sury.gpg https://packages.sury.org/php/apt.gpg && \
