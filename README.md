@@ -8,7 +8,7 @@ The PHP image on Docker hub is larger and doesn't include extensions commonly ne
 The goal with this image is to provide sensible defaults and extensions while keeping image size as small as possible.
 
 **Versioning**
-`latest` tag currently runs 7.0
+`latest` tag currently runs 7.1
 
 **Extensions**
 `mcrypt` `pdo_mysql` `pdo_pgsql` `memcached` `xdebug` `intl` `composer` `git`
