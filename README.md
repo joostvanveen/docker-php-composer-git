@@ -1,4 +1,6 @@
 # PHP (FPM) Laravel Base Image
+Forked from guhungry/docker-php-composer-git.
+
 Base docker image for Laravel applications. Extended from Debian Jessie and built to be
 reasonably small by removing unnecessary system files. See the versioning below.
 
