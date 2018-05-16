@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Woraphot Chokratanasombat <guhungry@gmail.com>
+MAINTAINER Joost van Veen <joost@accentinteractive.nl>
 
 # Install Git, PHP, xdebug
 RUN apt-get update && apt-get install -y openssl ca-certificates cron curl
