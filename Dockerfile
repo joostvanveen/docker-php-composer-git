@@ -11,7 +11,7 @@ RUN curl -o dotdeb.gpg https://www.dotdeb.org/dotdeb.gpg && \
     echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
 
 # Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y git php7.0-cli php7.0-curl php7.0-dom php7.0-fpm php7.0-intl php7.0-mbstring php7.0-mcrypt php7.0-memcached php7.0-mysqlnd php7.0-sqlite3 php7.0-pgsql php7.0-xdebug php7.0-zip php7.0-gd && \
+RUN apt-get update && apt-get install -y git php7.0-cli php7.0-gd php7.0-curl php7.0-dom php7.0-fpm php7.0-intl php7.0-mbstring php7.0-mcrypt php7.0-memcached php7.0-mysqlnd php7.0-sqlite3 php7.0-pgsql php7.0-xdebug php7.0-zip php7.0-gd && \
     apt-get clean && apt-get autoremove && \
     rm -rf /usr/share/locale/* && \
     rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
