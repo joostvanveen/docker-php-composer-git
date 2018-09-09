@@ -2,12 +2,12 @@ FROM debian:jessie
 MAINTAINER Joost van Veen <joost@accentinteractive.nl>
 
 # Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y openssl ca-certificates curl wget git
+RUN apt-get update && apt-get install -y openssl apt-transport-https lsb-release ca-certificates curl wget git
 
-# Install dotdeb Repository
-RUN echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list.d/dotdeb.org.list && \
-    echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list.d/dotdeb.org.list && \
-    wget -O- http://www.dotdeb.org/dotdeb.gpg | apt-key add -
+# Get available PHP 7.1 packages
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+apt-get update
 
 # Install Git, PHP, xdebug
 RUN \
