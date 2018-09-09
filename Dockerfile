@@ -1,17 +1,17 @@
 FROM debian:jessie
-MAINTAINER Woraphot Chokratanasombat <guhungry@gmail.com>
+MAINTAINER Joost van Veen <joost@accentinteractive.nl>
 
 # Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y openssl lsb-release apt-transport-https ca-certificates cron curl
+RUN apt-get update && apt-get install -y openssl ca-certificates cron curl
 
-# Install sury Repository
-RUN curl -o sury.gpg https://packages.sury.org/php/apt.gpg && \
-    apt-key add sury.gpg && \
-    rm sury.gpg && \
-    echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" >> /etc/apt/sources.list
+# Install dotdeb Repository
+RUN curl -o dotdeb.gpg https://www.dotdeb.org/dotdeb.gpg && \
+    apt-key add dotdeb.gpg && \
+    rm dotdeb.gpg && \
+    echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
 
 # Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y git php7.1-cli php7.1-curl php7.1-dom php7.1-fpm php7.1-intl php7.1-mbstring php7.1-mcrypt php7.1-memcached php7.1-mysqlnd php7.1-pgsql php7.1-xdebug php7.1-zip && \
+RUN apt-get update && apt-get install -y git php7.1-cli php7.1-gd php7.1-curl php7.1-dom php7.1-fpm php7.1-intl php7.1-mbstring php7.1-mcrypt php7.1-memcached php7.1-mysqlnd php7.1-sqlite3 php7.1-pgsql php7.1-xdebug php7.1-zip && \
     apt-get clean && apt-get autoremove && \
     rm -rf /usr/share/locale/* && \
     rm -rf /var/cache/debconf && mkdir -p /var/cache/debconf && \
