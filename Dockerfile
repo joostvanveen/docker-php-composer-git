@@ -10,9 +10,10 @@ RUN echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list.d/
     wget -O- http://www.dotdeb.org/dotdeb.gpg | apt-key add -
 
 # Install Git, PHP, xdebug
-RUN
-\apt-get update &&
-\apt-get install -y git php5.6-cli \
+RUN \
+apt-get update && \
+apt-get install -y git \
+php5.6-cli \
 php5.6-gd \
 php5.6-curl \
 php5.6-dom \
