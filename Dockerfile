@@ -13,6 +13,7 @@ RUN echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list.d/
 RUN \
 apt-get update && \
 apt-get install -y \
+php7.1 \
 php7.1-cli \
 php7.1-gd \
 php7.1-curl \
