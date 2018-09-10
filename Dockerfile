@@ -15,7 +15,7 @@ git
 
 # Get available PHP 7.1 packages
 RUN \
-wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -  && \
+wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -  && \
 echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.list.d/php.list
 
 # Install PHP
