@@ -1,15 +1,24 @@
 FROM debian:jessie
 MAINTAINER Joost van Veen <joost@accentinteractive.nl>
 
-# Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y openssl apt-transport-https lsb-release ca-certificates curl wget git
+# Install Linux packages
+RUN \
+apt-get update && \
+apt-get install -y \
+wget \
+openssl \
+apt-transport-https \
+lsb-release \
+ca-certificates \
+curl \
+git
 
 # Get available PHP 7.1 packages
-wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
-apt-get update
+RUN \
+wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -  && \
+echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.list.d/php.list
 
-# Install Git, PHP, xdebug
+# Install PHP
 RUN \
 apt-get update && \
 apt-get install -y \
