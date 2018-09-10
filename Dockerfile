@@ -26,10 +26,9 @@ php5.6-mysqlnd \
 php5.6-sqlite3 \
 php5.6-pgsql \
 php5.6-xdebug \
-php5.6-zip \
-&& \
-apt-get clean &&
-\apt-get autoremove
+php5.6-zip && \
+apt-get clean && \
+apt-get autoremove
 
 # Install Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
