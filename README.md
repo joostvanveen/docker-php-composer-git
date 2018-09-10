@@ -15,7 +15,7 @@ The goal with this image is to provide sensible defaults and extensions while ke
 
 **Versioning**
 All avaliable PHP versions have their own branch in this repository:
-- 5.6 ![Build passing](https://img.shields.io/badge/build-failing-red.svg)
+- 5.6 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 7.0 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 7.1 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 
