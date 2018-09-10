@@ -1,18 +1,27 @@
 FROM debian:jessie
 MAINTAINER Joost van Veen <joost@accentinteractive.nl>
 
-# Install Git, PHP, xdebug
-RUN apt-get update && apt-get install -y openssl ca-certificates curl wget git
-
-# Install dotdeb Repository
-RUN echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list.d/dotdeb.org.list && \
-    echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list.d/dotdeb.org.list && \
-    wget -O- http://www.dotdeb.org/dotdeb.gpg | apt-key add -
-
-# Install Git, PHP, xdebug
+# Install Linux packages
 RUN \
 apt-get update && \
-apt-get install -y git \
+apt-get install -y \
+wget \
+openssl \
+apt-transport-https \
+lsb-release \
+ca-certificates \
+curl \
+git
+
+# Get available PHP 7.1 packages
+RUN \
+wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -  && \
+echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.list.d/php.list
+
+# Install PHP
+RUN \
+apt-get update && \
+apt-get install -y \
 php5.6-cli \
 php5.6-gd \
 php5.6-curl \
