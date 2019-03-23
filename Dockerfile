@@ -13,7 +13,7 @@ ca-certificates \
 curl \
 git
 
-# Get available PHP 7.1 packages
+# Get available PHP 7.2 packages
 RUN \
 wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -  && \
 echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.list.d/php.list
@@ -22,21 +22,20 @@ echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.lis
 RUN \
 apt-get update && \
 apt-get install -y \
-php7.1 \
-php7.1-cli \
-php7.1-gd \
-php7.1-curl \
-php7.1-dom \
-php7.1-fpm \
-php7.1-intl \
-php7.1-mbstring \
-php7.1-mcrypt \
-php7.1-memcached \
-php7.1-mysqlnd \
-php7.1-sqlite3 \
-php7.1-pgsql \
-php7.1-xdebug \
-php7.1-zip
+php7.2 \
+php7.2-cli \
+php7.2-gd \
+php7.2-curl \
+php7.2-dom \
+php7.2-fpm \
+php7.2-intl \
+php7.2-mbstring \
+php7.2-mcrypt \
+php7.2-memcached \
+php7.2-mysqlnd \
+php7.2-sqlite3 \
+php7.2-pgsql \
+php7.2-zip
 
 # Install Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
