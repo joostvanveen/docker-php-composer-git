@@ -30,7 +30,6 @@ php7.2-dom \
 php7.2-fpm \
 php7.2-intl \
 php7.2-mbstring \
-php7.2-mcrypt \
 php7.2-memcached \
 php7.2-mysqlnd \
 php7.2-sqlite3 \
