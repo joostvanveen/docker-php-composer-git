@@ -35,6 +35,7 @@ php7.2-memcached \
 php7.2-mysqlnd \
 php7.2-sqlite3 \
 php7.2-pgsql \
+php7.2-bcmath \
 php7.2-zip
 
 # Install Composer
