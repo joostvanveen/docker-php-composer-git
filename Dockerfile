@@ -20,7 +20,7 @@ echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.lis
 
 # Install PHP
 RUN \
-apt-get update && \
+apt-get update -y && \
 apt-get install -y \
 php7.2 \
 php7.2-cli \
