@@ -14,10 +14,13 @@ The PHP image on Docker hub is larger and doesn't include extensions commonly ne
 The goal with this image is to provide sensible defaults and extensions while keeping image size as small as possible.
 
 **Versioning**
+`latest` tag currently runs 7.2
+
 All avaliable PHP versions have their own branch in this repository:
 - 5.6 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 7.0 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 7.1 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
+- 7.2 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 
 **Extensions**
 `mcrypt` `pdo_mysql` `pdo_pgsql` `memcached` `xdebug` `intl` `composer` `git`
