@@ -11,7 +11,8 @@ apt-transport-https \
 lsb-release \
 ca-certificates \
 curl \
-git
+git \
+gnupg2
 
 # Get available PHP 7.3 packages
 RUN \
