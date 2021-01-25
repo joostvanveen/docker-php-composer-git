@@ -21,9 +21,10 @@ All avaliable PHP versions have their own branch in this repository:
 - 7.0 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 7.1 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 7.2 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
+- 7.3 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 
 **Extensions**
-`mcrypt` `pdo_mysql` `pdo_pgsql` `memcached` `xdebug` `intl` `composer` `git`
+`mcrypt` `pdo_mysql` `pdo_pgsql` `memcached` `xdebug` `intl` `composer` `git` `json`
 
 **Usage**
 Extend this image in your `Dockerfile` and add your source code. The `php-fpm` process is set as the CMD default.
