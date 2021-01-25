@@ -16,7 +16,7 @@ git
 # Get available PHP 7.3 packages
 RUN \
 wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -  && \
-echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.list.d/php.list
+echo "deb https://packages.sury.org/php/ buster main" | tee /etc/apt/sources.list.d/php.list
 
 # Install PHP
 RUN \
@@ -29,6 +29,7 @@ php7.3-curl \
 php7.3-dom \
 php7.3-fpm \
 php7.3-intl \
+php7.3-json \
 php7.3-mbstring \
 php7.3-memcached \
 php7.3-mysqlnd \
