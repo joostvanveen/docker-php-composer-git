@@ -30,7 +30,6 @@ php8.0-curl \
 php8.0-dom \
 php8.0-fpm \
 php8.0-intl \
-php8.0-json \
 php8.0-mbstring \
 php8.0-memcached \
 php8.0-mysqlnd \
