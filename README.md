@@ -14,7 +14,7 @@ The PHP image on Docker hub is larger and doesn't include extensions commonly ne
 The goal with this image is to provide sensible defaults and extensions while keeping image size as small as possible.
 
 **Versioning**
-`latest` tag currently runs 7.2
+`latest` tag currently runs 8.1
 
 All avaliable PHP versions have their own branch in this repository:
 - 5.6 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
