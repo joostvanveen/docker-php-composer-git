@@ -18,7 +18,7 @@ The PHP image on Docker hub is substantially larger and doesn't include extensio
 The goal with this image is to provide sensible defaults and extensions while keeping image size as small as possible.
 
 **Versioning**
-`latest` tag currently runs 7.2
+`latest` tag currently runs 8.4
 
 All avaliable PHP versions have their own branch in this repository:
 - 5.6 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
@@ -28,9 +28,13 @@ All avaliable PHP versions have their own branch in this repository:
 - 7.3 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 7.4 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 - 8.0 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
+- 8.1 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
+- 8.2 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
+- 8.3 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
+- 8.4 ![Build passing](https://img.shields.io/badge/build-passing-green.svg)
 
 **Extensions**
-`mcrypt` `pdo_mysql` `pdo_pgsql` `memcached` `xdebug` `intl` `composer` `git`
+`mcrypt` `pdo_mysql` `pdo_pgsql` `memcached` `xdebug` `intl` `composer` `git` `json`
 
 **Usage**
 Extend this image in your `Dockerfile` and add your source code. The `php-fpm` process is set as the CMD default.
